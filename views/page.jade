@@ -4,15 +4,15 @@ html
         title= "Real time web chat"
         script(src='/chat.js')
         script(src='/socket.io/socket.io.js')
-    body
-        #content(style='width: 500px;height: 300px;margin: auto auto 20px auto; border: solid 1px #999;overflow-y: scroll;background-color: #81A1F8;'
+    body(style='background-color: black;')
+        #content(style='width: 500px;height: 300px;margin: 90px auto 20px auto; border: solid 1px #999;overflow-y: scroll;background-color: #81A1F8;'
         )
-        .controls(style='display: flex;flex-direction: column;align-items: center;background-color: lightblue;padding: 20px;')
+        .controls(style='display: flex;flex-direction: column;align-items: center;background-color: black;padding: 20px;color: white;')
             | Name: 
             input#name(style='width:350px;height: 30px;margin: 10px 0;border: 1px solid gray;border-radius: 5px;font-size: 18px;padding: 5px;'
             )
             br
             | Message :
             input#field(style=' width:350px;height: 30px;margin: 10px 0;border: 1px solid gray;border-radius: 5px;font-size: 18px;padding: 5px;')
-            input#send(style='width: 80px;height: 40px;background-color: green;color: white;border: none;border-radius: 5px;font-size: 18px;cursor: pointer;'
+            input#send(type='submit',value='Send',style='width: 80px;height: 40px;background-color: green;color: white;border: none;border-radius: 5px;font-size: 18px;cursor: pointer;'
             )

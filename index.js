@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var port = process.env.PORT || 3700;
+var port = process.env.PORT || 3000;
 
 app.set('views', __dirname + '/views');
 app.set('view engine', "jade");
@@ -16,9 +16,9 @@ var midPort = app.listen(port, function () {
     console.log('Node.js listening on port ' + port);
 })
 
-var io = require('socket.io').listen(midPort);
+const io = require('socket.io')(midPort);
 io.sockets.on('connection', function (socket) {
-    socket.emit('message', { message: 'Real Time Web Chat' });
+    socket.emit('message', { message: 'Web Chat' });
     socket.on('send', function (data) {
         io.sockets.emit('message', data);
     });

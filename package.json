@@ -1,0 +1,23 @@
+{
+  "name": "chat_app",
+  "version": "1.0.0",
+  "description": "Web Chat Application With NodeJS and Socket.io",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prabal-007/Nodejs-Real-time-Chat-Application.git"
+  },
+  "keywords": [
+    "nodejs",
+    "socket.io",
+    "expressJS",
+    "chat",
+    "app"
+  ],
+  "author": "Adnan El ouadghiri",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "socket.io": "^1.5.0"
+  }
+}

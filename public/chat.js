@@ -1,5 +1,10 @@
 window.onload = function() {
 
+
+    var name = document.getElementById("name");
+    var params = new URL(location.href).searchParams;
+    var username = params.get("username");
+    name.innerHTML = username;
     var messages = [];
     var socket = io.connect('http://localhost:3000');
     var field = document.getElementById("field");

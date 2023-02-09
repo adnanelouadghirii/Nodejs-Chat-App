@@ -9,14 +9,13 @@ app.get("/", function(req, res){
     res.render("page");
 });
 
-
 app.use(express.static(__dirname + '/public'));
 
-var midPort = app.listen(port, function () {
+var server = app.listen(port, function () {
     console.log('Node.js listening on port ' + port);
 })
 
-const io = require('socket.io')(midPort);
+const io = require('socket.io')(server);
 io.sockets.on('connection', function (socket) {
     socket.emit('message', { message: 'Web Chat' });
     socket.on('send', function (data) {
